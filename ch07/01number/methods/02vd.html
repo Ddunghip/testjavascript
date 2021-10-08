@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var n = new Number(12385);
+        var enter = "<br />";
+        var a =new Number(92134);
+
+        var max = 0;
+        var max1 = 0;
+        while(n>0){
+            var donvi = n%10;
+            if(donvi > max) max = donvi;
+            n = (n-donvi) /10
+        }
+        document.write("chu so lon nhat: "+max+enter);
+        
+        Number.prototype.getMaxDigit = function(){
+            var number = this.valueOf();
+           document.write("number: "+ number +enter);
+
+            while(number > 0){
+                var donvi1 = number % 10;
+                if(donvi1 > max1) max1 = donvi1;
+                number = (number - donvi1) / 10;
+            }
+            return max1;
+        } 
+        document.write("chu so lon nhat: "+ a.getMaxDigit()+enter);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>    
+        //var fullname = "Nguyen Tien Dung";
+        var enter= "<br />";
+
+        //var spacefirst = fullname.indexOf(" ");
+        //var spaceend=fullname.lastIndexOf(" ");
+
+       // document.write("Ho :" + fullname.slice(0,spacefirst)+enter);
+       // document.write("Ho den :" + fullname.slice(spacefirst,spaceend)+enter);
+       // document.write("Ten :" + fullname.slice(spaceend)+enter);
+
+        String.prototype.splitName = function(){
+            var result;
+            var spacefirst = this.indexOf(" ");
+            var spaceend = this.lastIndexOf(" ");
+
+            if(spacefirst > 0 && spaceend >0){
+                result ="Ho :" + this.slice(0,spacefirst)+enter;
+                result += "Ho dem :" + this.slice(spacefirst,spaceend)+enter;
+                result += "Ten :" + this.slice(spaceend)+enter;
+            }else{
+                result = "Du lieu khong hop le";
+            }
+            return result;
+        }
+        //var fullname = new String();
+        //fullname = "Nguyen Minh Son";
+        //document.write("Result: "+ fullname.splitName());
+
+        function splitName(){
+            var fullname = new String();
+            fullname = document.getElementById("full-name").value;
+            document.getElementById("result").innerHTML = fullname.splitName();
+ 
+        }
+
+    </script>
+    <style type="text/css">
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .content{
+        width: 400px;
+        height: 200px;
+        margin: 20px auto;
+        border: 2px solid #ccc;
+        text-align: center;
+        padding: 10px;
+    }
+    .content input[type = button]{
+        padding: 2px 5px;
+    }
+    .content #result{
+        text-align:justify ;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <input type="text" name="full-name" id = "full-name" />
+        <input type="button" value="Split" onclick="splitName();" />
+        <div id ="result"></div>
+    </div>
+</body>
+</html>

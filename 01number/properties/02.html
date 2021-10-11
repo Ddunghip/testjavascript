@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var n = new Number(12);
+        var str= "javascript";
+        var enter = "<br />";
+        document.write("value: "+ n +"<br />");
+        document.write("Type: "+typeof n + enter);
+
+        document.write("Constructor: "+ n.constructor + enter); 
+        document.write("Constructor str: "+ str.constructor + enter);
+        
+        document.write("Maxvalue:" +Number.MAX_VALUE+enter);
+        document.write("Minvalue:" +Number.MIN_VALUE+enter);
+        document.write("Negative infinity:" +Number.NEGATIVE_INFINITY +enter);
+        document.write("NaN:" +Number.NaN +enter);
+        document.write("Positive infinity:" +Number.POSITIVE_INFINITY +enter);
+        document.write("Prototype:" +Number.prototype +enter);
+
+        document.write("Phep chia n/String:" +n/str +enter);
+        isNaN(n);
+        document.write("isNAN(n)" +isNaN(n) +enter);
+        document.write("isNAN(dsd)" +isNaN("dsd") +enter);
+
+        var a = 15;
+        var b = 12321321;
+        var result;
+        document.write("a/b: " +a/b +enter);
+        if(isNaN(a/b)){
+            result = "phep toan khong thuc hien duoc";
+        }else{
+            result = a/b;
+
+        }
+        document.write("ket qua: "+result +enter);
+
+        Number.prototype.zero = 0;
+
+        document.write("Number.zero : " + n.zero +enter);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

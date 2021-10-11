@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var enter = "<br / >";
+        var arr_1 = ["html","css","js"];
+        var arr_2 = [7, "pa","html"];
+
+        var result = new Array();
+        result = arr_1.concat(arr_2);
+        document.write(result +  enter);
+        document.write(  result.constructor + enter);
+
+        document.write("vi tri dau trong mang: "+result.indexOf("html") +  enter);
+        document.write("vi tri cuoi trong mang: "+result.lastIndexOf("html") +  enter);
+        document.write("join(): "+result.join("-").constructor + enter);
+        document.write("join(): "+result.join("-") + enter);
+
+        // pop
+        document.write("<hr />");
+        document.write("result: "+ result + enter);
+
+        var a = result.pop();
+        document.write("a = result.pop(): "+a + enter);
+        document.write("result: "+ result + enter);
+        var b = result.shift();
+        document.write("b = result.shift(): "+b+enter)
+        document.write("result: "+ result + enter);
+
+        var c = result.push("c++");
+        document.write("c = result.push(): "+c+enter);
+        document.write("result: "+ result + enter);
+
+        var d = result.unshift("c#");
+        document.write("d = result.unshift(): "+d+enter);
+        document.write("result: "+ result + enter);
+
+        document.write("<hr />");
+
+
+        //slice(s,e)
+        var arr = ["a","b","c","d","e","a"];
+        document.write("arr: " + arr+ enter);
+        document.write("arr.slice(5): "+ arr.slice(2,5)+enter);
+        document.write("arr: " + arr.sort()+ enter);
+        document.write("arr.constructor: " + arr.sort().constructor+ enter);
+        document.write("arr.splice(2,1): " +         arr.splice(2,3)+ enter);
+        document.write("arr: " + arr+ enter);
+        document.write("arr.splice(1,1,g,h): " +         arr.splice(1,0,"g","h")+ enter);
+        document.write("arr: " + arr+ enter);
+        document.write("arr.reverse: " + arr.reverse()+ enter);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

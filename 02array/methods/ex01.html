@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // loai cac phan tu trung nhau
+        var arr = Array(1,2,3,4,5,6,2,3,1,9);
+
+        /*
+        var newarr
+        duyet arr => kiem tra phan tu khong ton tai trong newarr
+        */
+        var newarr = [];
+        var enter = "<br />";
+        for (x in arr){
+            if(newarr.indexOf(arr[x]) < 0 ){
+                newarr.push(arr[x]);
+            }
+        }
+
+        document.write("input: "+ arr + enter);
+        document.write("output: "+newarr + enter);
+
+        var student = {"first_name":"Mary","last_name":"Jane","birthday":1990,"sex":1};
+        document.write(student["first_name"]+ enter);
+        var result = {}; 
+        result["full_name"] = student["first_name"] +" "  +student["last_name"];
+        result["birthday"] = 2021 - student["birthday"];
+        result["sex"] = (student["sex"] ==1) ? "Boy":"Girl";
+
+        for(x in result){
+            document.write(x + ": " + result[x]+ enter);
+        }
+        //ex3
+        var newstudent = Array(
+            ["Nguyen Van A",[5,6,7]],
+            ["Nguyen Van B",[7,8,9]],
+            ["Nguyen Van C",[8,9,9]],
+
+
+        )
+        for(x in newstudent){
+        var score  = newstudent[x][1]; 
+        var temp = 0;
+        for(y in score){
+            temp += score[y];
+        }
+        newstudent[x][1] = Math.floor( temp/score.length);
+        document.write(newstudent[x]+enter);         
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
